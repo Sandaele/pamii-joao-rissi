@@ -6,5 +6,7 @@ function verificarParImpar(n) {
     return n % 2 == 0 ? n+' é par' : n+' é ímpar';
 }
 
-numero = prompt('digite o número')
-window.alert(verificarParImpar(numero));
+function botão1() {
+    numero = prompt('digite o número')
+    window.alert(verificarParImpar(numero));
+}

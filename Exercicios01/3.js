@@ -4,8 +4,10 @@ informado pelo usuário.
 */
 
 function somaTodosNumeros(n) {
-    return soma = (n / 2) * ()
+    return soma = (n/2)*(1+n);
 }
 
-numero = prompt('digite o número')
-window.alert(verificarParImpar(numero));
+function botão3() {
+    numero = prompt('digite o número')
+    window.alert('a soma do PA ate seu número é '+somaTodosNumeros(numero));
+}
