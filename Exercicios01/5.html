@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+<body>
+
+    <div id="caixa">
+
+        <h1>Contar quantas vezes uma letra aparece em uma palavra</h1>
+
+        <form id="calculadora">
+            <label for="palavra">Palavra:</label>
+            <input type="text" id="palavra" />
+            <label for="letra">Letra:</label>
+            <input type="text" id="letra" />
+            <button type="submit">Contar</button>
+        </form>
+
+        <div id="resultado"></div>
+
+    </div>
+
+    <script>
+
+        calculadora = document.getElementById('calculadora')
+        resultado = document.getElementById('resultado')
+        palavra = document.getElementById('palavra');
+        letra = document.getElementById('letra');
+
+        function contarLetras(p, l) {
+            let contagem = 0
+
+            for (let i = 0; i < p.length; i++) {
+                if (p[i].toLowerCase() === l.toLowerCase()) {
+                    contagem++
+                }
+            }
+            return resultado.innerHTML = `A letra "${l}"" aparece ${contagem} vezes na palavra "${p}"`;
+        }
+
+        calculadora.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            contarLetras(palavra.value, letra.value)
+        });
+
+    </script>
+</body>
+</html>

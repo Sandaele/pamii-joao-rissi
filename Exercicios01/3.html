@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+
+    <div id="caixa">
+
+        <h1>Soma de números de 1 a N</h1>
+
+        <form id="calculadora">
+            <label for="numero">Número:</label>
+            <input type="number" id="numero" />
+            <button type="submit">Calcular</button>
+        </form>
+
+        <div id="resultado"></div>
+
+    </div>
+
+    <script>
+
+        calculadora = document.getElementById('calculadora')
+        resultado = document.getElementById('resultado')
+        numero = document.getElementById('numero');
+
+        function somaTodosNumeros(n) {
+        return resultado.innerHTML = `A soma de 1 a ${n} é ${( n / 2 ) * ( 1 + n )}`;
+        }
+
+        calculadora.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            somaTodosNumeros(parseInt(numero.value))
+        });
+
+    </script>
+</body>
+</html>

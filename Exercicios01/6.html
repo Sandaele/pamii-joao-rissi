@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+</head>
+<body>
+
+    <div id="caixa">
+
+        <h1>Inverter uma string</h1>
+
+        <form id="calculadora">
+            <label for="palavra">Palavra:</label>
+            <input type="text" id="palavra" />
+            <button type="submit">Inverter</button>
+        </form>
+
+        <div id="resultado"></div>
+
+    </div>
+
+    <script>
+        const calculadora = document.getElementById('calculadora');
+        const resultado = document.getElementById('resultado');
+        const palavra = document.getElementById('palavra');
+    
+        function inverterString(p) {
+            let invertida = "";
+    
+            for (let j = p.length - 1; j >= 0; j--) {
+                invertida += p[j];
+            }
+    
+            resultado.innerHTML = `A palavra "${p}" fica "${invertida}" invertida`;
+        }
+    
+        calculadora.addEventListener('submit', function(event) {
+            event.preventDefault();
+            inverterString(palavra.value);
+        });
+    </script>
+    
+</body>
+</html>
