@@ -1,7 +1,12 @@
 body {
-
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    margin-top: 3cm; 
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
-form {
-    
+#caixa {
+    padding: 1cm;
+    border: 2px solid black;
 }
