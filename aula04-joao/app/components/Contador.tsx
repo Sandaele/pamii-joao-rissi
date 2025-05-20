@@ -1,10 +1,9 @@
 import React from 'react';
-import { Text, Button, View, styles } from
-'react-native';
+import { Text, Button, View, StyleSheet } from 'react-native';
 
 export default class Cotador extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             contador: 0,
         };

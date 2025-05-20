@@ -1,0 +1,3 @@
+set-executionpolicy remotesigned
+npx yarn add expo
+npm run web
